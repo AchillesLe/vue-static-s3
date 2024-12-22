@@ -4,9 +4,6 @@ import { ENV_CONFIG } from '../constants/config';
 defineProps<{ msg: string }>()
 const count = ref(0)
 
-const a = ENV_CONFIG
-console.log(a, import.meta.env.APP_ENV);
-
 
 </script>
 
