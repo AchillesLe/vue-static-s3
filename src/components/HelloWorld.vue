@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { ENV_CONFIG } from '../constants/config';
 defineProps<{ msg: string }>()
 const count = ref(0)
+
+const a = ENV_CONFIG
+console.log(a, import.meta.env.APP_ENV);
 
 
 </script>
@@ -12,8 +16,7 @@ const count = ref(0)
   <div class="card">
     <button type="button" @click="count++">count is {{ count }}</button>
     <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
+      {{ ENV_CONFIG }}
     </p>
   </div>
 
